@@ -1,4 +1,4 @@
-from piece import Piece, SupportivePiece, Pawn
+from piece import SupportivePiece, Pawn
 
 
 class Tile:

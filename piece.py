@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 class Piece(ABC):
     @abstractmethod
     def __init__(self, player):
-        #white=false, black=true
         self.player = player
         self.has_moved = False
         self.ttl = -1

@@ -1,8 +1,4 @@
-from copy import deepcopy
-
 import pygame
-import copy
-
 
 class Button:
     def __init__(self, x, y, width, height, text, font, action = None, border_width=3, color = "white", text_color = "black",  border_color="black"):

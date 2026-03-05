@@ -1,5 +1,5 @@
 from tile import Tile
-from piece import Piece, Pawn, Rook, Knight, Bishop, Queen, King, SupportivePiece
+from piece import Pawn, Rook, Knight, Bishop, Queen, King, SupportivePiece
 import copy
 class ChessBoard:
     def __init__(self):

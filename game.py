@@ -70,17 +70,6 @@ class Game:
                                     "", font, self.tileButtonAction, (7 - i, j), 0,
                                     "beige" if (i + j) % 2 == 0 else (62, 29, 35)) for j in range(8)] for i in range(8)]
         for i in range(8):
-        #     # TILES
-        #         tile_coords_x = BOARD_COARDX + j * TILE_SIZE
-        #         tile_coords_y = BOARD_COARDY + i * TILE_SIZE
-        #         ##displaying tile itself
-        #         tile = TileButton(tile_coords_x, tile_coords_y, TILE_SIZE, TILE_SIZE, "", font, self.tileButtonAction, (7-i, j), 0,
-        #                           "beige" if (i + j) % 2 == 0 else (62, 29, 35))
-        #         tile.draw(display_surface)
-        #         tile_buttons.append(tile)
-
-
-
             # COORDINATE MARKINGS
             # top letters
             text_surface = pygame.Surface((TILE_SIZE, TILE_SIZE), pygame.SRCALPHA)
@@ -136,15 +125,6 @@ class Game:
                     i, j = move
                     tile_buttons[7-i][j].is_active = True
 
-            # for i in range(8):
-            #     for j in range(8):
-            #         button = tile_buttons[i][j]
-            #         x, y = button.board_coords
-            #         if  not self.board.legal_moves[x][y] and not button in moveable_onto_tiles :
-            #             button.is_active = False
-            # for tile in moveable_onto_tiles:
-            #     tile.is_active = True
-
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
@@ -156,23 +136,6 @@ class Game:
                             button.act()
                         else:
                             self.pressed_button = None
-                # elif event.type == pygame.MOUSEBUTTONDOWN:
-                #     if event.button == 1:
-                #         for button in buttons:
-                #             if type(button) == TileButton and button.is_hovered() and button.is_active():
-                #                 self.pressed_button = button
-                # elif event.type == pygame.MOUSEBUTTONUP:
-                #     if event.button == 1 and self.pressed_button:
-                #         for button in buttons:
-                #             if type(button) == TileButton and button.is_hovered() and button.is_active():
-                #                 if button == self.pressed_button:
-                #                     INPUT_STR = INPUT_STR + self.pressed_button.__str__()
-                #                     if len(INPUT_STR) == 4:
-                #                         coord_origin, coord_destination = self.string_to_pair_of_pairs(INPUT_STR)
-                #                         if self.board.move(coord_origin, coord_destination):
-                #                             self.player = not self.player
-                #                         INPUT_STR = ""
-                #         self.pressed_button = None
 
 
             HIGHLIGHT_POSSIBLE_MOVES = False
