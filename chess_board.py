@@ -1,4 +1,3 @@
-import piece
 from tile import Tile
 from piece import Piece, Pawn, Rook, Knight, Bishop, Queen, King, SupportivePiece
 import copy

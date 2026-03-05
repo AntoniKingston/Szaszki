@@ -187,7 +187,7 @@ class Game:
                     self.mate = self.board.mate()
                     self.draw = self.board.draw()
                     if self.mate:
-                        print("MAT SKURWYSYNU")
+                        print("MAT")
                 self.input_str = ""
 
 
